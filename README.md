@@ -1,5 +1,3 @@
-# tdl-experience-service
-
 The DIY Labs Primary Microservice 
 ========================================================================
 
