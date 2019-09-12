@@ -12,7 +12,7 @@ Navigation: [Website][1] | **Server repository** | [Client Repository][2] | [SCR
   [4]: https://drive.google.com/drive/folders/1pnuU_NkWmLM9S7_38YvV06Ge3Xfxew1v
   [9]: https://google.com
 
-Team: [Nicholas Chin][1] |[Kevin Hong][2] | [Alvin Lo][3]
+Team: [Nicholas Chin][1] | [Kevin Hong][2] | [Alvin Lo][3]
 
   [1]: https://github.com/theblackathena
   [2]: https://github.com/joonkeehong
