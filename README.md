@@ -3,10 +3,10 @@
 The DIY Labs Primary Microservice 
 ========================================================================
 
-Team: [Nicholas Chin][5]| [Kevin Hong][6]| [Alvin Lo][7]
-  [5]:https://github.com/theblackathena
-  [6]:https://github.com/joonkeehong
-  [7]:https://github.com/alvincylo
+Team: [Nicholas Chin] [5] | [Kevin Hong] [6] | [Alvin Lo] [7]
+  [5]: https://github.com/theblackathena
+  [6]: https://github.com/joonkeehong
+  [7]: https://github.com/alvincylo
 
 Navigation: [Website][1] | **Server repository** | [Client Repository] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams][9]
 
