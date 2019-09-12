@@ -8,7 +8,7 @@ Team: [Nicholas Chin][5] | [Kevin Hong][6] | [Alvin Lo][7]
 [6]:https://github.com/joonkeehong
 [7]:https://github.com/alvincylo
 
-Navigation: [Website][1] | **Server repository** | [Client repository][2] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams] [9]
+Navigation: [Website][1] | **Server repository** | [Client Repository][2] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams][9]
 
   [1]: https://thediylabs.com
   [2]: 
