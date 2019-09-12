@@ -4,9 +4,9 @@ The DIY Labs Primary Microservice
 ========================================================================
 
 Team: [Nicholas Chin][5] | [Kevin Hong][6] | [Alvin Lo][7]
-[5]:https://github.com/theblackathena
-[6]:https://github.com/joonkeehong
-[7]:https://github.com/alvincylo
+  [5]:https://github.com/theblackathena
+  [6]:https://github.com/joonkeehong
+  [7]:https://github.com/alvincylo
 
 Navigation: [Website][1] | **Server repository** | [Client Repository] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams][9]
 
@@ -16,11 +16,6 @@ Navigation: [Website][1] | **Server repository** | [Client Repository] | [SCRUM 
   [4]: https://drive.google.com/drive/folders/1pnuU_NkWmLM9S7_38YvV06Ge3Xfxew1v
   [9]: https://google.com
 
-Navigation: [Website][1] | **Server repository** | [Client repository][2] | [Dex repository][3]
-
-  [1]: http://pokemonshowdown.com/
-  [2]: https://github.com/Zarel/Pokemon-Showdown-Client
-  [3]: https://github.com/Zarel/Pokemon-Showdown-Dex
 
 
 Introduction
