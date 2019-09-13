@@ -14,7 +14,7 @@ Team: [Nicholas Chin][1] | [Kevin Hong][2] | [Alvin Lo][3]
 
   [1]: https://github.com/theblackathena
   [2]: https://github.com/joonkeehong
-  [3]: https://github.com/alvincylo
+  [3]: https://github.com/AlvinCYLo
 
 Introduction
 ------------------------------------------------------------------------
