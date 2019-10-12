@@ -1,21 +1,20 @@
-# tdl-experience-service
-
 The DIY Labs Primary Microservice 
 ========================================================================
 
-Team: [Nicholas Chin][5] | [Kevin Hong][6] | [Alvin Lo][7]
-[5]:https://github.com/theblackathena
-[6]:https://github.com/joonkeehong
-[7]:https://github.com/alvincylo
 
-Navigation: [Website][1] | **Server repository** | [Client repository][2] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams] [9]
+Navigation: [Website][1] | **Server repository** | [Client Repository][2] | [SCRUM Board][3] | [Project Blueprint][4] | [Diagrams][9]
 
   [1]: https://thediylabs.com
-  [2]: 
+  [2]: https://facebook.com
   [3]: https://trello.com/b/GGE9MAIj/thediylabs
   [4]: https://drive.google.com/drive/folders/1pnuU_NkWmLM9S7_38YvV06Ge3Xfxew1v
-  [9]:
+  [9]: https://google.com
 
+Team: [Nicholas Chin][1] | [Kevin Hong][2] | [Alvin Lo][3]
+
+  [1]: https://github.com/theblackathena
+  [2]: https://github.com/joonkeehong
+  [3]: https://github.com/AlvinCYLo
 
 Introduction
 ------------------------------------------------------------------------
