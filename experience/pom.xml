@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.diy.labs</groupId>
-	<artifactId>experience</artifactId>
+	<artifactId>diy-labs-experience</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>experience</name>
-	<description>Demo project for Spring Boot</description>
-
+	<packaging>jar</packaging>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -36,8 +36,12 @@
 		<dependency>
     		<groupId>org.yaml</groupId>
     		<artifactId>snakeyaml</artifactId>
-		    <version>1.21</version>            
-	</dependency>
+		</dependency>
+		<dependency>
+			<groupId>com.diy.labs.model</groupId>
+			<artifactId>diy-labs-model</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -48,5 +52,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
