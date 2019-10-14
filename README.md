@@ -19,7 +19,7 @@ Team: [Nicholas Chin][1] | [Kevin Hong][2] | [Alvin Lo][3]
 Introduction
 ------------------------------------------------------------------------
 
-This is the source code for the xAPI server of [TheDIYLabs][8], a website for the sourcing of local foods and services. 
+This is the source code of [TheDIYLabs][8], a website for the sourcing of local foods and services. 
 
   [8]: https://thediylabs.com
 
