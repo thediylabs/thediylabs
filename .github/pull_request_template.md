@@ -1,5 +1,5 @@
 Trello Task: __
 
-- [] gif pls
-- [] unit testing??
-- [] reviewed by 1 other dev
+- [ ] gif pls
+- [ ] unit testing??
+- [ ] reviewed by 1 other dev
