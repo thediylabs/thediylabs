@@ -5,8 +5,7 @@ import org.jsonschema2pojo.AbstractAnnotator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.sun.codemodel.JDefinedClass;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 /** 
  * @author nicholaschin
