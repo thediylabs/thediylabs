@@ -1,17 +1,14 @@
 package com.diy.labs.model.common;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
+import com.sun.codemodel.*;
 import org.jsonschema2pojo.Schema;
 import org.jsonschema2pojo.rules.Rule;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.sun.codemodel.*;
-import org.jsonschema2pojo.*;
 
 /** 
  * 
  * @author nicholaschin
- * 
- * This class is 
  *
  */
 
@@ -41,6 +38,7 @@ public class DIYLABLombokPropertyRule implements Rule<JDefinedClass, JDefinedCla
 		JFieldVar field = jclass.field(JMod.PRIVATE, propertyType, propertyName);
 		
 		propertyAnnotations(nodeName, node, schema, field);
+		
 		formatAnnotation(field, jclass, nodeName, node);
 		
 		ruleFactory.getAnnotator().propertyField(field, jclass, nodeName, node);
@@ -109,7 +107,6 @@ public class DIYLABLombokPropertyRule implements Rule<JDefinedClass, JDefinedCla
 	
 	private boolean isArray(JsonNode node) {
 		return node.path("type").asText().equals("array");
-
 	}
 
 }

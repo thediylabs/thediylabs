@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.diy.labs</groupId>
 	<artifactId>diy-labs-experience</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>experience</name>
 	<packaging>jar</packaging>
 	
@@ -37,11 +37,11 @@
     		<groupId>org.yaml</groupId>
     		<artifactId>snakeyaml</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.diy.labs.model</groupId>
 			<artifactId>diy-labs-model</artifactId>
 			<version>1.0.0</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>

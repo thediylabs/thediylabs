@@ -1,0 +1,59 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "productId",
+    "productName",
+    "tags",
+    "price"
+  ],
+  "properties": {
+    "productId": {
+      "$id": "#/properties/productId",
+      "type": "integer",
+      "title": "The Productid Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "productName": {
+      "$id": "#/properties/productName",
+      "type": "string",
+      "title": "The Productname Schema",
+      "default": "",
+      "examples": [
+        "Cake"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "tags": {
+      "$id": "#/properties/tags",
+      "type": "array",
+      "title": "The Tags Schema",
+      "items": {
+        "$id": "#/properties/tags/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "home",
+          "sweet"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "price": {
+      "$id": "#/properties/price",
+      "type": "number",
+      "title": "The Price Schema",
+      "default": 0.0,
+      "examples": [
+        12.5
+      ]
+    }
+  }
+}
