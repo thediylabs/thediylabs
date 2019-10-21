@@ -6,7 +6,7 @@ Navigation: [Website][1] | **Server repository** | [Client Repository][2] | [SCR
 
   [1]: https://thediylabs.com
   [2]: https://facebook.com
-  [3]: https://trello.com/b/GGE9MAIj/thediylabs
+  [3]: https://trello.com/b/sqSV8Ky2/the-diy-labs
   [4]: https://drive.google.com/drive/folders/1pnuU_NkWmLM9S7_38YvV06Ge3Xfxew1v
   [9]: https://google.com
 

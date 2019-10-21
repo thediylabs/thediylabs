@@ -5,12 +5,6 @@ import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -22,10 +16,6 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @JsonPropertyOrder({
     "productId",
     "productName",
@@ -81,6 +71,23 @@ public class ProductsSchema {
      * No args constructor for use in serialization
      * 
      */
+    public ProductsSchema() {
+    }
+
+    /**
+     * 
+     * @param productId
+     * @param price
+     * @param productName
+     * @param tags
+     */
+    public ProductsSchema(Integer productId, String productName, List<String> tags, Double price) {
+        super();
+        this.productId = productId;
+        this.productName = productName;
+        this.tags = tags;
+        this.price = price;
+    }
 
     @Override
     public int hashCode() {
