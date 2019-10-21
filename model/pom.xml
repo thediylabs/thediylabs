@@ -6,11 +6,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.9.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>com.diy.labs</groupId>
 	<artifactId>diy-labs-model</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>model</name>
 
@@ -42,7 +42,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
@@ -70,39 +69,43 @@
 						<groupId>org.jsonschema2pojo</groupId>
 						<artifactId>jsonschema2pojo-maven-plugin</artifactId>
 						<version>${jsonschema.version}</version>
-						<dependencies>
+						<dependencies> 
 							<dependency>
 								<groupId>com.diy.labs</groupId>
 								<artifactId>diy-labs-model</artifactId>
-								<version>0.0.1-SNAPSHOT</version>
+								<version>1.0.0</version>
 							</dependency>
 						</dependencies>
+						<configuration>
+							<outputDirectory>${basedir}/src/main/java</outputDirectory>
+							<includeAccessors>false</includeAccessors>
+							<includeAdditionalProperties>false</includeAdditionalProperties>
+							<includeHashCodeAndEquals>false</includeHashCodeAndEquals>
+							<includeToString>false</includeToString>
+							<initializeCollections>false</initializeCollections>
+							<includeConstructors>true</includeConstructors>
+							<customAnnotator>com.diy.labs.model.common.DIYLABLombokAnnotator</customAnnotator>
+							<customRuleFactory>com.diy.labs.model.common.DIYLABLombokRuleFactory</customRuleFactory>
+							<includeDynamicAccessors>true</includeDynamicAccessors>
+							<includeJsr303Annotations>true</includeJsr303Annotations>
+						</configuration>
 						<executions>
 							<execution>
-								<id>generate-pojo-models</id>
+								<id>generate-product-pojos</id>
 								<goals>
 									<goal>generate</goal>
 								</goals>
 								<configuration>
 									<sourceDirectory>${basedir}/src/main/resources/schemas/common</sourceDirectory>
-									<targetPackage>${target.package}.common</targetPackage>
-									<outputDirectory>${basedir}/src/main/java</outputDirectory>
-									<includeAccessors>false</includeAccessors>
-									<includeAdditionalProperties>false</includeAdditionalProperties>
-									<includeHashCodeAndEquals>false</includeHashCodeAndEquals>
-									<includeToString>false</includeToString>
-									<initializeCollections>false</initializeCollections>
-									<includeConstructors>true</includeConstructors>
-									<customAnnotator>com.diy.labs.model.common.DIYLABLombokAnnotator</customAnnotator>
-									<customRuleFactory>com.diy.labs.model.common.DIYLABLombokRuleFactory</customRuleFactory>
-									<includeDynamicAccessors>true</includeDynamicAccessors>
-									<includeJsr303Annotations>true</includeJsr303Annotations>
+									<targetPackage>${target.package}</targetPackage>
 								</configuration>
 							</execution>
 						</executions>
 					</plugin>
 				</plugins>
 			</build>
-		</profile>
+		</profile>	
 	</profiles>
+	
+	
 </project>
