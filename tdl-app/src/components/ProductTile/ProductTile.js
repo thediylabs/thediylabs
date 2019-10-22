@@ -53,6 +53,6 @@ ProductTile.propTypes = {
 
 ProductTile.defaultProps = {
     productDetails: undefined,
-};
+}
 
 export default ProductTile;

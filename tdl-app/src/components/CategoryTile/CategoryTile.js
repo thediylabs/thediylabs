@@ -62,21 +62,23 @@ const CategoryTile = () => {
         },
     ];
     const classes = useStyles();
-    const CollisionLink = React.forwardRef((props, ref) => (
+    const CollisionLink = (category) => {
+      return(React.forwardRef((props, ref) => (
         <Link
           innerRef={ref}
           to={{
             pathname: "/products",
+            search: "?category=" + category,
           }}
           {...props}
         />
-      ));
+      )));};
     return (
         <div className={classes.root}>
             <GridList cellHeight={250} className={classes.gridList} cols={2}>
                 {tileData.map(tile => (
                 <GridListTile key={tile.img} cols={tile.cols || 1}>
-                    <ButtonBase focusRipple component={CollisionLink} className={classes.image}>
+                    <ButtonBase focusRipple component={CollisionLink(tile.title)} className={classes.image}>
                         <img src={tile.img} alt={tile.title} />
                     </ButtonBase>
                 </GridListTile>
