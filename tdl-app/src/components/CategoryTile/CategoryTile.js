@@ -68,7 +68,7 @@ const CategoryTile = () => {
           innerRef={ref}
           to={{
             pathname: "/products",
-            search: "?category=" + category,
+            search: `?category=${  category}`,
           }}
           {...props}
         />
