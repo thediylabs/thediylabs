@@ -8,14 +8,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@material-ui/core": "^4.5.1",
+    "prop-types": "^15.7.2",
     "react": "^16.10.2",
-<<<<<<< HEAD
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
-=======
-    "react-dom": "^16.10.2"
->>>>>>> 9bc80e6df781d4920ad32d97ed21db3675762d97
   },
   "scripts": {
     "start": "react-scripts start",

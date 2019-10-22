@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
-import { GridList, GridListTile, GridListTileBar, ButtonBase } from '@material-ui/core';
+import { GridList, GridListTile, ButtonBase } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -36,53 +36,9 @@ const useStyles = makeStyles(theme => ({
           },
         },
       },
-      focusVisible: {},
-      imageButton: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: theme.palette.common.white,
-      },
-      imageSrc: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 40%',
-      },
-      imageBackdrop: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        backgroundColor: theme.palette.common.black,
-        opacity: 0.4,
-        transition: theme.transitions.create('opacity'),
-      },
-      imageTitle: {
-        position: 'relative',
-        padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
-      },
-      imageMarked: {
-        height: 3,
-        width: 18,
-        backgroundColor: theme.palette.common.white,
-        position: 'absolute',
-        bottom: -2,
-        left: 'calc(50% - 9px)',
-        transition: theme.transitions.create('opacity'),
-      },
   }));
 
-export const CategoryTile = () => {
+const CategoryTile = () => {
     const tileData = [
         {
             img: 'https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/salted_dark_chocolate_16338_16x9.jpg',
@@ -120,9 +76,8 @@ export const CategoryTile = () => {
             <GridList cellHeight={250} className={classes.gridList} cols={2}>
                 {tileData.map(tile => (
                 <GridListTile key={tile.img} cols={tile.cols || 1}>
-                    <ButtonBase focusRipple component={CollisionLink} className={classes.image} focusVisibleClassName={classes.focusVisible}>
+                    <ButtonBase focusRipple component={CollisionLink} className={classes.image}>
                         <img src={tile.img} alt={tile.title} />
-                        {/* <GridListTileBar title={tile.title}/> */}
                     </ButtonBase>
                 </GridListTile>
                 ))}

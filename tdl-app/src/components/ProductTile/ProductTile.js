@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Card, CardContent, Typography, CardMedia } from '@material-ui/core';
 
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
     },
   });
 
-export const ProductTile = ({productDetails}) => {
+const ProductTile = ({productDetails}) => {
     const classes = useStyles();
     return (
         <Card className={classes.card}>
@@ -38,6 +39,20 @@ export const ProductTile = ({productDetails}) => {
             </CardContent>
         </Card>
     );
+};
+
+ProductTile.propTypes = {
+    productDetails: PropTypes.shape({
+        name: PropTypes.string,
+        seller: PropTypes.string,
+        price: PropTypes.string,
+        images: PropTypes.arrayOf(PropTypes.string),
+        description: PropTypes.string,
+    }),
+};
+
+ProductTile.defaultProps = {
+    productDetails: undefined,
 };
 
 export default ProductTile;
