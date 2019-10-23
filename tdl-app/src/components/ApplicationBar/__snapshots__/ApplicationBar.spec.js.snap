@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationBar renders correctly 1`] = `
+<div>
+  <header
+    className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+    style={
+      Object {
+        "background": "transparent",
+        "boxShadow": "none",
+      }
+    }
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+        style={
+          Object {
+            "color": "#000",
+          }
+        }
+      >
+        The DIY Labs
+      </p>
+    </div>
+  </header>
+</div>
+`;

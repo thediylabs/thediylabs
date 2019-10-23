@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryTile renders correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <ul
+    className="MuiGridList-root makeStyles-gridList-2"
+    style={
+      Object {
+        "margin": -2,
+      }
+    }
+  >
+    <li
+      className="MuiGridListTile-root"
+      style={
+        Object {
+          "height": 254,
+          "padding": 2,
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="MuiGridListTile-tile"
+      >
+        <a
+          aria-disabled={false}
+          className="MuiButtonBase-root makeStyles-image-3"
+          href="/products?category=Cake"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <img
+            alt="Cake"
+            src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/salted_dark_chocolate_16338_16x9.jpg"
+          />
+        </a>
+      </div>
+    </li>
+    <li
+      className="MuiGridListTile-root"
+      style={
+        Object {
+          "height": 254,
+          "padding": 2,
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="MuiGridListTile-tile"
+      >
+        <a
+          aria-disabled={false}
+          className="MuiButtonBase-root makeStyles-image-3"
+          href="/products?category=Cookies"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <img
+            alt="Cookies"
+            src="https://images-gmi-pmc.edge-generalmills.com/983f0c5a-2b13-40db-8c92-748b279bcc3f.jpg"
+          />
+        </a>
+      </div>
+    </li>
+    <li
+      className="MuiGridListTile-root"
+      style={
+        Object {
+          "height": 254,
+          "padding": 2,
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="MuiGridListTile-tile"
+      >
+        <a
+          aria-disabled={false}
+          className="MuiButtonBase-root makeStyles-image-3"
+          href="/products?category=Macaroons"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <img
+            alt="Macaroons"
+            src="https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2012/10/Multicoloured-macaroons.jpg"
+          />
+        </a>
+      </div>
+    </li>
+    <li
+      className="MuiGridListTile-root"
+      style={
+        Object {
+          "height": 254,
+          "padding": 2,
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="MuiGridListTile-tile"
+      >
+        <a
+          aria-disabled={false}
+          className="MuiButtonBase-root makeStyles-image-3"
+          href="/products?category=Bubble Tea"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <img
+            alt="Bubble Tea"
+            src="https://nowtoronto.com/downloads/101749/download/brown_sugar_horizontal.jpg?cb=fb860bfcd400e392c401193f54fb32e1&w=640"
+          />
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
