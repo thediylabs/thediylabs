@@ -1,0 +1,23 @@
+DB SETUP
+#1
+npm install mongodb (make sure it's in your root folder)
+
+#2
+~/mongodb/bin/mongod (to run daemon)
+
+#3
+~/mongodb/bin/mongo (to run shell)
+
+DB POPULATION
+#1
+use.products
+
+#2
+db.products.insertMany([
+    { "productCode": "01", "productName": "Super Amazing Awesome Cake", "productDescription": "This cake is super duper amazing", "sellerName": "Gordon Ramsay", "productPrice": 123.5, "qty": 25, "tags": { "sweet": 1, "cake": 2, "delicacy": 3 }, "status": "A", "img": "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Choc-Fudge-Cake-b2d1909.jpg?quality=45&resize=620,413"},
+    { "productCode": "02", "productName": "Not So Amazing Cake", "productDescription": "This cake is not so amazing", "sellerName": "Gordon Ramsay", "productPrice": 12.34, "qty": 25, "tags": { "sweet": 1, "cake": 2, "disgusting": 3 }, "status": "U" , "img": "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"}    
+])
+
+#3
+db.products.find({})
+db.products.find({}).pretty()

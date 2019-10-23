@@ -8,7 +8,7 @@ import com.diy.labs.experience.model.SearchResponseSchema;
 public class SearchService {
 
 	public SearchResponseSchema searchCategoryService(@RequestBody SearchRequestSchema request) {
-		SearchResponseSchema response = SearchResponseSchema.builder().build();
+//		SearchResponseSchema response = SearchResponseSchema.builder().build();
 		
 		return null;
 		

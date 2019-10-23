@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.diy.labs</groupId>
 	<artifactId>diy-labs-model</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>diy-labs-model</name>
 
 	<properties>
@@ -20,6 +20,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<jsonschema.version>0.4.29</jsonschema.version>
+		<target.package>com.diy.labs.model</target.package>
 	</properties>
 
 	<dependencies>
@@ -116,7 +117,7 @@
 								</goals>
 								<configuration>
 									<sourceDirectory>${basedir}/src/main/resources/schemas/common</sourceDirectory>
-									<targetPackage>${target.package}</targetPackage>
+									<targetPackage>${target.package}.hub</targetPackage>
 								</configuration>
 							</execution>
 						</executions>

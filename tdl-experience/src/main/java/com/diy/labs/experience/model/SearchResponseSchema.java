@@ -1,10 +1,13 @@
 package com.diy.labs.experience.model;
 
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import lombok.Builder;
+
+import com.diy.labs.model.hub.Product;
 
 import lombok.Builder;
 import lombok.Data;
@@ -37,5 +40,10 @@ public class SearchResponseSchema {
      * (Required)
      * 
      */
+
+	public static Object builder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

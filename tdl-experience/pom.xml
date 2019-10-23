@@ -11,7 +11,6 @@
 	<groupId>com.diy.labs</groupId>
 	<artifactId>diy-labs-experience</artifactId>
 	<version>1.0.0</version>
-	<name>experience</name>
 	<packaging>jar</packaging>
 	
 	<properties>
@@ -37,11 +36,17 @@
     		<groupId>org.yaml</groupId>
     		<artifactId>snakeyaml</artifactId>
 		</dependency>
-		<!-- <dependency>
-			<groupId>com.diy.labs.model</groupId>
+		<dependency>
+			<groupId>com.diy.labs</groupId>
 			<artifactId>diy-labs-model</artifactId>
 			<version>1.0.0</version>
-		</dependency> -->
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>false</optional>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
