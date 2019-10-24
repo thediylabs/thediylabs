@@ -1,3 +1,6 @@
+
+package com.diy.labs.model.hub;
+
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,7 +25,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
     "tags",
     "price"
 })
-public class ProductsSchema {
+public class Product {
 
     /**
      * The Productid Schema
@@ -71,7 +74,7 @@ public class ProductsSchema {
      * No args constructor for use in serialization
      * 
      */
-    public ProductsSchema() {
+    public Product() {
     }
 
     /**
@@ -81,7 +84,7 @@ public class ProductsSchema {
      * @param productName
      * @param tags
      */
-    public ProductsSchema(Integer productId, String productName, List<String> tags, Double price) {
+    public Product(Integer productId, String productName, List<String> tags, Double price) {
         super();
         this.productId = productId;
         this.productName = productName;
@@ -99,10 +102,10 @@ public class ProductsSchema {
         if (other == this) {
             return true;
         }
-        if ((other instanceof ProductsSchema) == false) {
+        if ((other instanceof Product) == false) {
             return false;
         }
-        ProductsSchema rhs = ((ProductsSchema) other);
+        Product rhs = ((Product) other);
         return new EqualsBuilder().append(productId, rhs.productId).append(productName, rhs.productName).append(tags, rhs.tags).append(price, rhs.price).isEquals();
     }
 
