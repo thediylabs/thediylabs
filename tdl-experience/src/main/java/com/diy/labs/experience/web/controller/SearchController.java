@@ -1,13 +1,14 @@
 package com.diy.labs.experience.web.controller;
 
 
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.diy.labs.experience.db.repository.ProductsRepository;
 import com.diy.labs.experience.model.SearchRequestSchema;
 import com.diy.labs.experience.model.SearchResponseSchema;
+import com.diy.labs.model.hub.Product;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -30,12 +33,25 @@ public class SearchController {
 	private static final String STATUS = "status";
 	private static final String OK = "OK";
 	
+	@Autowired
+	private ProductsRepository productsRepository;
+	
 	// TODO: Change to POST for search implementation 
-	@GetMapping("/api/category")
+	@RequestMapping("/api/category")
 	public ResponseEntity<SearchResponseSchema> searchCategory(@RequestParam String tags) {
-		LOGGER.info("Call initiated");
+		// Inject fake data
+		productsRepository.deleteAll();
+		productsRepository.save(new Product(1,"Super Amazing Awesome Cake", "This cake is super duper amazing", "Gordon Ramsay", 12350, 25, "cake", "A", "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Choc-Fudge-Cake-b2d1909.jpg?quality=45&resize=620,413"));
+		productsRepository.save(new Product(2, "Not So Amazing Cake", "This cake is not so amazing", "Gordon Ramsay", 1234, 25, "cake", "U", "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"));
+		LOGGER.info("Products populated");
+
+		List<Product> temp = new ArrayList<Product>();
 		
-//		SearchResponseSchema response = SearchResponseSchema.builder().build();
-		return ResponseEntity.status(HttpStatus.OK).body(null);
+		for (Product product : productsRepository.findByTag(tags)) {
+			temp.add(product);
+		}
+		
+		SearchResponseSchema response = SearchResponseSchema.builder().products(temp).build();
+		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 }
