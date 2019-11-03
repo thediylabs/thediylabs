@@ -5,19 +5,24 @@
   "type": "object",
   "title": "The Root Schema",
   "required": [
-    "productId",
+    "productCode",
     "productName",
-    "tags",
-    "price"
+    "productDescription",
+    "sellerName",
+    "productPrice",
+    "qty",
+    "tag",
+    "status",
+    "img"
   ],
   "properties": {
-    "productId": {
-      "$id": "#/properties/productId",
+    "productCode": {
+      "$id": "#/properties/productCode",
       "type": "integer",
-      "title": "The Productid Schema",
+      "title": "The Productcode Schema",
       "default": 0,
       "examples": [
-        1
+        2
       ]
     },
     "productName": {
@@ -26,34 +31,77 @@
       "title": "The Productname Schema",
       "default": "",
       "examples": [
-        "Cake"
+        "Not So Amazing Cake"
       ],
       "pattern": "^(.*)$"
     },
-    "tags": {
-      "$id": "#/properties/tags",
-      "type": "array",
-      "title": "The Tags Schema",
-      "items": {
-        "$id": "#/properties/tags/items",
-        "type": "string",
-        "title": "The Items Schema",
-        "default": "",
-        "examples": [
-          "home",
-          "sweet"
-        ],
-        "pattern": "^(.*)$"
-      }
-    },
-    "price": {
-      "$id": "#/properties/price",
-      "type": "number",
-      "title": "The Price Schema",
-      "default": 0.0,
+    "productDescription": {
+      "$id": "#/properties/productDescription",
+      "type": "string",
+      "title": "The Productdescription Schema",
+      "default": "",
       "examples": [
-        12.5
+        "This cake is not so amazing"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "sellerName": {
+      "$id": "#/properties/sellerName",
+      "type": "string",
+      "title": "The Sellername Schema",
+      "default": "",
+      "examples": [
+        "Gordon Ramsay"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "productPrice": {
+      "$id": "#/properties/productPrice",
+      "type": "integer",
+      "title": "The Productprice Schema",
+      "default": 0,
+      "examples": [
+        1234
       ]
+    },
+    "qty": {
+      "$id": "#/properties/qty",
+      "type": "integer",
+      "title": "The Qty Schema",
+      "default": 0,
+      "examples": [
+        25
+      ]
+    },
+    "tag": {
+      "$id": "#/properties/tag",
+      "type": "string",
+      "title": "The Tag Schema",
+      "default": "",
+      "examples": [
+        "cake"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The Status Schema",
+      "default": "",
+      "examples": [
+        "U"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "img": {
+      "$id": "#/properties/img",
+      "type": "string",
+      "title": "The Img Schema",
+      "default": "",
+      "examples": [
+        "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"
+      ],
+      "pattern": "^(.*)$"
     }
   }
 }
