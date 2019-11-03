@@ -1,6 +1,6 @@
 DB SETUP
 #1
-npm install mongodb (make sure it's in your root folder)
+brew install mongodb (make sure it's in your root folder)
 
 #2
 ~/mongodb/bin/mongod (to run daemon)
@@ -10,7 +10,7 @@ npm install mongodb (make sure it's in your root folder)
 
 DB POPULATION
 #1
-use.products
+use products
 
 #2
 db.products.insertMany([
