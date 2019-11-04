@@ -1,8 +1,6 @@
 
 package com.diy.labs.model.hub;
 
-import java.util.List;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.springframework.data.annotation.Id;
 
 
 /**
@@ -20,23 +19,31 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "productId",
+    "productCode",
     "productName",
-    "tags",
-    "price"
+    "productDescription",
+    "sellerName",
+    "productPrice",
+    "qty",
+    "tag",
+    "status",
+    "img"
 })
 public class Product {
 
+	@Id
+	public String id; 
+	
     /**
-     * The Productid Schema
+     * The Productcode Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @JsonProperty("productId")
+    @JsonProperty("productCode")
     @NotNull
-    private Integer productId = 0;
+    public Integer productCode = 0;
     /**
      * The Productname Schema
      * <p>
@@ -47,28 +54,82 @@ public class Product {
     @JsonProperty("productName")
     @Pattern(regexp = "^(.*)$")
     @NotNull
-    private String productName = "";
+    public String productName = "";
     /**
-     * The Tags Schema
+     * The Productdescription Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @JsonProperty("tags")
-    @Valid
+    @JsonProperty("productDescription")
+    @Pattern(regexp = "^(.*)$")
     @NotNull
-    private List<String> tags = null;
+    public String productDescription = "";
     /**
-     * The Price Schema
+     * The Sellername Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @JsonProperty("price")
+    @JsonProperty("sellerName")
+    @Pattern(regexp = "^(.*)$")
     @NotNull
-    private Double price = 0.0D;
+    public String sellerName = "";
+    /**
+     * The Productprice Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("productPrice")
+    @NotNull
+    public Integer productPrice = 0;
+    /**
+     * The Qty Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("qty")
+    @NotNull
+    public Integer qty = 0;
+    /**
+     * The Tag Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("tag")
+    @Pattern(regexp = "^(.*)$")
+    @NotNull
+    public String tag = "";
+    /**
+     * The Status Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("status")
+    @Pattern(regexp = "^(.*)$")
+    @NotNull
+    public String status = "";
+    /**
+     * The Img Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("img")
+    @Pattern(regexp = "^(.*)$")
+    @NotNull
+    public String img = "";
 
     /**
      * No args constructor for use in serialization
@@ -79,34 +140,34 @@ public class Product {
 
     /**
      * 
-     * @param productId
-     * @param price
+     * @param img
+     * @param productCode
+     * @param qty
+     * @param sellerName
+     * @param tag
      * @param productName
-     * @param tags
+     * @param productDescription
+     * @param productPrice
+     * @param status
      */
-    public Product(Integer productId, String productName, List<String> tags, Double price) {
+    public Product(Integer productCode, String productName, String productDescription, String sellerName, Integer productPrice, Integer qty, String tag, String status, String img) {
         super();
-        this.productId = productId;
+        this.productCode = productCode;
         this.productName = productName;
-        this.tags = tags;
-        this.price = price;
+        this.productDescription = productDescription;
+        this.sellerName = sellerName;
+        this.productPrice = productPrice;
+        this.qty = qty;
+        this.tag = tag;
+        this.status = status;
+        this.img = img;
     }
 
-    @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(productId).append(productName).append(tags).append(price).toHashCode();
-    }
-
-    @Override
-    public boolean equals(Object other) {
-        if (other == this) {
-            return true;
-        }
-        if ((other instanceof Product) == false) {
-            return false;
-        }
-        Product rhs = ((Product) other);
-        return new EqualsBuilder().append(productId, rhs.productId).append(productName, rhs.productName).append(tags, rhs.tags).append(price, rhs.price).isEquals();
+    @Override 
+    public String toString() {
+    	return String.format(
+    			"Product[id=%s, productCode='%s', productName='%s', productDescription='%s', sellerName='%s', productPrice='%s', qty='%s', tag='%s', status='%s', img='%s']",
+    			id, productCode, productName, productDescription, sellerName, productPrice, qty, tag, status, img);
     }
 
 }
