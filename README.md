@@ -1,8 +1,8 @@
-The DIY Labs Primary Microservice 
+The DIY Labs
 ========================================================================
 
 
-Navigation: [Website][1] | **Server repository** | [SCRUM Board][2] | [Project Blueprint][3]
+Navigation: [Website][1] | **MonoRepo** | [SCRUM Board][2] | [Project Blueprint][3]
 
   [1]: https://thediylabs.com
   [2]: https://trello.com/b/sqSV8Ky2/the-diy-labs
