@@ -1,6 +1,8 @@
 
 package com.diy.labs.model.hub;
 
+import java.util.List;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -25,14 +27,14 @@ import org.springframework.data.annotation.Id;
     "sellerName",
     "productPrice",
     "qty",
-    "tag",
+    "tags",
     "status",
     "img"
 })
 public class Product {
 
 	@Id
-	public String id; 
+	public String id;
 	
     /**
      * The Productcode Schema
@@ -98,16 +100,16 @@ public class Product {
     @NotNull
     public Integer qty = 0;
     /**
-     * The Tag Schema
+     * The Tags Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @JsonProperty("tag")
-    @Pattern(regexp = "^(.*)$")
+    @JsonProperty("tags")
+    @Valid
     @NotNull
-    public String tag = "";
+    public List<String> tags = null;
     /**
      * The Status Schema
      * <p>
@@ -144,13 +146,13 @@ public class Product {
      * @param productCode
      * @param qty
      * @param sellerName
-     * @param tag
      * @param productName
      * @param productDescription
      * @param productPrice
+     * @param tags
      * @param status
      */
-    public Product(Integer productCode, String productName, String productDescription, String sellerName, Integer productPrice, Integer qty, String tag, String status, String img) {
+    public Product(Integer productCode, String productName, String productDescription, String sellerName, Integer productPrice, Integer qty, List<String> tags, String status, String img) {
         super();
         this.productCode = productCode;
         this.productName = productName;
@@ -158,16 +160,16 @@ public class Product {
         this.sellerName = sellerName;
         this.productPrice = productPrice;
         this.qty = qty;
-        this.tag = tag;
+        this.tags = tags;
         this.status = status;
         this.img = img;
     }
-
+    
     @Override 
     public String toString() {
     	return String.format(
     			"Product[id=%s, productCode='%s', productName='%s', productDescription='%s', sellerName='%s', productPrice='%s', qty='%s', tag='%s', status='%s', img='%s']",
-    			id, productCode, productName, productDescription, sellerName, productPrice, qty, tag, status, img);
+    			id, productCode, productName, productDescription, sellerName, productPrice, qty, tags, status, img);
     }
 
 }
