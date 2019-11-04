@@ -2,6 +2,7 @@ package com.diy.labs.experience.web.controller;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -36,18 +37,18 @@ public class SearchController {
 	@Autowired
 	private ProductsRepository productsRepository;
 	
-	// TODO: Change to POST for search implementation 
-	@RequestMapping("/api/category")
+	@RequestMapping("/api/getCategory")
 	public ResponseEntity<SearchResponseSchema> searchCategory(@RequestParam String tags) {
 		// Inject fake data
 		productsRepository.deleteAll();
-		productsRepository.save(new Product(1,"Super Amazing Awesome Cake", "This cake is super duper amazing", "Gordon Ramsay", 12350, 25, "cake", "A", "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Choc-Fudge-Cake-b2d1909.jpg?quality=45&resize=620,413"));
-		productsRepository.save(new Product(2, "Not So Amazing Cake", "This cake is not so amazing", "Gordon Ramsay", 1234, 25, "cake", "U", "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"));
+		
+		productsRepository.save(new Product(1,"Super Amazing Awesome Cake", "This cake is super duper amazing", "Gordon Ramsay", 12350, 25, Arrays.asList(new String[] {"cake", "sweet"}) , "A", "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Choc-Fudge-Cake-b2d1909.jpg?quality=45&resize=620,413"));
+		productsRepository.save(new Product(2, "Not So Amazing Cake", "This cake is not so amazing", "Gordon Ramsay", 1234, 25, Arrays.asList(new String[] {"cake", "bitter"}), "U", "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"));
 		LOGGER.info("Products populated");
 
 		List<Product> temp = new ArrayList<Product>();
 		
-		for (Product product : productsRepository.findByTag(tags)) {
+		for (Product product : productsRepository.findByTags(tags)) {
 			temp.add(product);
 		}
 		

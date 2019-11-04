@@ -9,6 +9,7 @@ import com.diy.labs.model.hub.Product;
 public interface ProductsRepository extends MongoRepository<Product,String>{
 	
 	public Product findByProductCode(String productCode);
-	public List<Product> findByTag(String tag);
+	public List<Product> findByTags(String tag);
+	public List<Product> findByTagsIn(List<String> tags);
 
 }

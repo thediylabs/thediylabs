@@ -11,7 +11,7 @@
     "sellerName",
     "productPrice",
     "qty",
-    "tag",
+    "tags",
     "status",
     "img"
   ],
@@ -22,7 +22,7 @@
       "title": "The Productcode Schema",
       "default": 0,
       "examples": [
-        2
+        1
       ]
     },
     "productName": {
@@ -31,7 +31,7 @@
       "title": "The Productname Schema",
       "default": "",
       "examples": [
-        "Not So Amazing Cake"
+        "Super Amazing Awesome Cake"
       ],
       "pattern": "^(.*)$"
     },
@@ -41,7 +41,7 @@
       "title": "The Productdescription Schema",
       "default": "",
       "examples": [
-        "This cake is not so amazing"
+        "This cake is super duper amazing"
       ],
       "pattern": "^(.*)$"
     },
@@ -61,7 +61,7 @@
       "title": "The Productprice Schema",
       "default": 0,
       "examples": [
-        1234
+        12350
       ]
     },
     "qty": {
@@ -73,15 +73,21 @@
         25
       ]
     },
-    "tag": {
-      "$id": "#/properties/tag",
-      "type": "string",
-      "title": "The Tag Schema",
-      "default": "",
-      "examples": [
-        "cake"
-      ],
-      "pattern": "^(.*)$"
+    "tags": {
+      "$id": "#/properties/tags",
+      "type": "array",
+      "title": "The Tags Schema",
+      "items": {
+        "$id": "#/properties/tags/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "cake",
+          "sugar"
+        ],
+        "pattern": "^(.*)$"
+      }
     },
     "status": {
       "$id": "#/properties/status",
@@ -89,7 +95,7 @@
       "title": "The Status Schema",
       "default": "",
       "examples": [
-        "U"
+        "A"
       ],
       "pattern": "^(.*)$"
     },
@@ -99,7 +105,7 @@
       "title": "The Img Schema",
       "default": "",
       "examples": [
-        "https://7yearolds.com/wp-content/uploads/2018/11/cake.jpgZ"
+        "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Choc-Fudge-Cake-b2d1909.jpg?quality=45&resize=620,413"
       ],
       "pattern": "^(.*)$"
     }
